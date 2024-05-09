@@ -1,0 +1,79 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Styling for the number input */
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 200px;
+}
+
+/* Styling for the "Guess" button */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the result display */
+.result {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Styling for the footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframes animation for header */
+@keyframes neon {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f, 0 0 100px #00f, 0 0 150px #00f;
+    }
+    50% {
+        color: #fff;
+        text-shadow: none;
+    }
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f, 0 0 100px #00f, 0 0 150px #00f;
+    }
+}
+
+h1 {
+    animation: neon 2s infinite alternate;
+}
