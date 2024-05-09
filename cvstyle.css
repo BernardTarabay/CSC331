@@ -82,6 +82,7 @@
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+
 /* ----- BASE ----- */
 *{
     margin: 0;
@@ -214,6 +215,16 @@ nav{
     background: var(--first-color);
     border-radius: 50%;
 }
+
+.nav-link:hover{
+
+    transform: scale(1.3);
+
+}
+
+.icon a:hover {
+    color: #28a745;
+  }
 
 
 
