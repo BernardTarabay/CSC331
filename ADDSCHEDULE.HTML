@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <title>Weekly Schedule</title>
+  <style>
+    /* Styles included from the previous enhancement */
+	:root{
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(30, 159, 171);
+
+    --first-color: rgb(110, 87, 224);
+    --first-color-hover: rgb(40, 91, 212);
+
+    --second-color: rgb(0, 201, 255);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f8;
+    }
+
+    header, footer {
+      background-color: var( --first-color);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto; /* Centers table and adds spacing */
+      background-color: #fff; /* White background for the table */
+      box-shadow: 1px 8px 10px 2px var(--first-shadow-color); /* Subtle shadow for depth */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+     background: var(--second-color);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: var(--second-color); /* Light blue on hover for rows */
+    }
+
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 40px 0;
+    }
+  </style>
+  <script>
+    function addClass() {
+      var table = document.getElementById("scheduleTable");
+      var row = table.insertRow(-1); // Insert a row at the end of the table
+      var dayCell = row.insertCell(0);
+      var timeCell = row.insertCell(1);
+      var courseCell = row.insertCell(2);
+      var locationCell = row.insertCell(3);
+      var instructorCell = row.insertCell(4);
+      var creditsCell = row.insertCell(5);
+
+      // Get values from form
+      dayCell.innerHTML = document.getElementById("day").value;
+      timeCell.innerHTML = document.getElementById("time").value;
+      courseCell.innerHTML = document.getElementById("course").value;
+      locationCell.innerHTML = document.getElementById("location").value;
+      instructorCell.innerHTML = document.getElementById("instructor").value;
+      creditsCell.innerHTML = document.getElementById("credits").value;
+
+      // Update total credits and hours
+      updateTotals();
+    }
+
+    function updateTotals() {
+      var table = document.getElementById("scheduleTable");
+      var totalCredits = 0;
+      var hours = 0;
+
+      for (var i = 1; i < table.rows.length - 1; i++) {
+        var creds = parseInt(table.rows[i].cells[5].innerHTML);
+        if (!isNaN(creds)) {
+          totalCredits += creds;
+        }
+      }
+
+      // Assuming each class is 1 hour 15 minutes for simplicity
+      hours = (table.rows.length - 2) * 1.25; // subtract header and total row
+
+      document.getElementById("totalCredits").innerHTML = totalCredits;
+      document.getElementById("totalHours").innerHTML = hours.toFixed(2) + " Hours";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Weekly Schedule</h1>
+    <nav>
+      
+    </nav>
+  </header>
+  
+  <section>
+    <!-- Form to add classes -->
+    <form onsubmit="return false;">
+      Day: <input type="text" id="day" required>
+      Time: <input type="text" id="time" required>
+      Course: <input type="text" id="course" required>
+      Location: <input type="text" id="location" required>
+      Instructor: <input type="text" id="instructor" required>
+      Credits: <input type="number" id="credits" required>
+      <button onclick="addClass()">Add Class</button>
+    </form>
+    <table id="scheduleTable">
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Course</th>
+        <th>Location</th>
+        <th>Instructor</th>
+        <th>Credits</th>
+      </tr>
+      <!-- Data rows added dynamically -->
+      <tr>
+        <td>Total Of Hours:</td>
+        <td id="totalHours">0 Hours</td>
+        <td></td>
+        <td></td>
+        <td>Total Of Credits:</td>
+        <td id="totalCredits">0</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <footer>
+    <div class="top-footer">
+        <p>Bernard Tarabay.</p>
+    </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+      <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
+      <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
+ </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+    </div>
+</footer>
+  <script>
+// Get all buttons with the 'data-download' attribute set to 'true'
+var downloadButtons = document.querySelectorAll('[data-download="true"]');
+
+// Loop through each button and attach the click event listener
+downloadButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Get the HTML content of the current page
+        var htmlContent = document.documentElement.outerHTML;
+        
+        // Create a blob containing the HTML content
+        var blob = new Blob([htmlContent], {type: 'text/html'});
+        
+        // Create a temporary URL for the blob
+        var url = window.URL.createObjectURL(blob);
+        
+        // Create a link element
+        var a = document.createElement('a');
+        a.href = url;
+        
+        // Set the filename
+        a.download = 'Your_Schedule.html';
+        
+        // Append the link to the document body
+        document.body.appendChild(a);
+        
+        // Click the link programmatically
+        a.click();
+        
+        // Cleanup
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    });
+});
+</script>
+</body>
+</html>

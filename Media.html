@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Page</title>
+
+      <!-- --------- UNICONS ---------- -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+      <!-- --------- CSS ---------- -->
+      <link rel="stylesheet" href="cvstyle.css">
+  
+      <!-- --------- FAVICON ---------- -->
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+<style>
+    /* Additional CSS for Customized Layout */
+    .video-container {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+      margin-left: 180px;
+    }
+
+    .gallery img {
+      width: calc(33.33%);
+      max-width: calc(33.33%);
+      margin: 0 5px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(2);
+    }
+
+    @media screen and (max-width: 768px) {
+      .gallery img {
+        width: calc(50%);
+        max-width: calc(50%);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .gallery img {
+        width: calc(100%);
+        max-width: calc(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <nav id="header">
+      <div class="nav-logo">
+          <p class="nav-name"></p>
+          <span></span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+              <li class="nav_list">
+                  <a href="MainPage.html" class="nav-link">Main</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="index.html" class="nav-link">CV</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Schedule.html" class="nav-link">Schedule</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Research.html" class="nav-link">Research</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="ArabicContent.html" class="nav-link">Arabic</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Media.html" class="nav-link  active-link">Media</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Quiz.html" class="nav-link">Quiz</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="minigames.html" class="nav-link">Games</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Contact Us.html" class="nav-link">Contact</a>
+                  <div class="circle"></div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  
+    <div class="container">
+      <h1>Media Page</h1>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="video-container">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery">
+      <img src="image1.png" alt="Image 1">
+      <img src="image2.png" alt="Image 2">
+      <img src="image3.png" alt="Image 3">
+    </div>
+  </div>
+
+  <footer>
+    <div class="top-footer">
+    </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+      <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+      <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></div>
+    </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+    </div>
+</footer>
+</body>
+</html>

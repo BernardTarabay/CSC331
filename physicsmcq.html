@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="cvstyle.css">
+    
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  
+  <style>
+    /* Resetting default browser styles */
+    body, h1, h2, h3, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Global styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        background-image: linear-gradient(to bottom right, #003147, lightblue);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for the quiz form */
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px; /* Increased gap between quadrants */
+    }
+
+    .quadrant1, .quadrant2, .quadrant3, .quadrant4, .quadrant5 {
+        background-color: lightblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header id="navHeader">
+    <div class="container">
+      <h1>Quiz</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <form id="quiz-form">
+      <div class="quadrant1">
+        <div class="question">
+          <h2>Question 1: What is the SI unit of force</h2>
+          <label><input type="radio" name="q1" value="Newton"> <span>Newton</span></label><br>
+          <label><input type="radio" name="q1" value="Pascal"> <span>Pascal</span></label><br>
+          <label><input type="radio" name="q1" value="Joule"> <span>Joule</span></label><br>
+          <label><input type="radio" name="q1" value="Pascal"> <span>Watt</span></label><br>
+        </div>
+        <div class="question">
+          <h2>Question 2: Which of the following is a vector quantity?</h2>
+          <label><input type="radio" name="q2" value="Speed"> <span>Speed</span></label><br>
+          <label><input type="radio" name="q2" value="Distance"> <span>Distance</span></label><br>
+          <label><input type="radio" name="q2" value="Velocity"> <span>Velocity</span></label><br>
+          <label><input type="radio" name="q2" value="Mass"> <span>Mass</span></label><br>
+        </div>
+      </div>
+      <div class="quadrant2">
+        <div class="question">
+          <h2>Question 3: Which of the following is a form of energy?</h2>
+          <label><input type="radio" name="q3" value="Atmospheric Pressure">Atmospheric Pressure</label><br>
+          <label><input type="radio" name="q3" value="Heat">Heat</label><br>
+          <label><input type="radio" name="q3" value="Mass">Mass</label><br>
+          <label><input type="radio" name="q3" value="Coldness">Coldness</label><br>
+        </div>
+        <div class="question">
+            <h2>Question 4: What is the SI unit of electric charge</h2>
+            <label><input type="radio" name="q4" value="Coulomb">Coulomb</label><br>
+            <label><input type="radio" name="q4" value="Ampere">Ampere</label><br>
+            <label><input type="radio" name="q4" value="Volt">Volt</label><br>
+            <label><input type="radio" name="q4" value="Ohm">Ohm</label><br>
+          </div>
+      </div>
+      <div class="quadrant3">
+        <div class="question">
+          <h2>Question 5: According to Newton's second law of motion, what is the relationship between force (F), mass (m), and acceleration (a)?</h2>
+          <label><input type="radio" name="q5" value="F=m/a">F=m/a</label><br>
+          <label><input type="radio" name="q5" value="F=m+a">F=m+a</label><br>
+          <label><input type="radio" name="q5" value="F=m-a">F=m-a</label><br>
+          <label><input type="radio" name="q5" value="F=m*a">F=m*a</label><br>
+        </div>
+        <div class="question">
+            <h2>Question 6:Which of the following statements about gravity is true? </h2>
+            <label><input type="radio" name="q6" value="It is a repulsive force between objects">It is a repulsive force between objects.</label><br>
+            <label><input type="radio" name="q6" value="It is only experienced by objects on Earth"> It is only experienced by objects on Earth.</label><br>
+            <label><input type="radio" name="q6" value="It is responsible for the acceleration of objects towards the Earth">It is responsible for the acceleration of objects towards the Earth.</label><br>
+            <label><input type="radio" name="q6" value="It is directly proportional to the distance between two objects">It is directly proportional to the distance between two objects.</label><br>
+        </div>
+      </div>
+      <div class="quadrant4">
+        <div class="question">
+          <h2>Question 7: What is the largest planet in our solar system?</h2>
+          <label><input type="radio" name="q7" value="Mars">Mars</label><br>
+          <label><input type="radio" name="q7" value="Venus">Venus</label><br>
+          <label><input type="radio" name="q7" value="Saturn">Saturn</label><br>
+          <label><input type="radio" name="q7" value="Jupiter">Jupiter</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 8: What is the relationship between frequency (f) and wavelength (λ) of a wave?</h2>
+          <label><input type="radio" name="q8" value="f = λ">f = λ</label><br>
+          <label><input type="radio" name="q8" value="f = 1/λ"> f = 1/λ</label><br>
+          <label><input type="radio" name="q8" value="f = λ^2">f = λ^2</label><br>
+          <label><input type="radio" name="q8" value="f = √λ">f = √λ</label><br>
+        </div>
+      </div>
+      <!-- New quadrants with additional questions -->
+      <div class="quadrant5">
+        <div class="question">
+          <h2>Question 9: What is the SI unit of pressure?</h2>
+          <label><input type="radio" name="q9" value="Pascal">Pascal</label><br>
+          <label><input type="radio" name="q9" value="Newton">Newton</label><br>
+          <label><input type="radio" name="q9" value="Joule">Joule</label><br>
+          <label><input type="radio" name="q9" value="Watt">Watt</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 10: What is the law of conservation of energy?</h2>
+          <label><input type="radio" name="q10" value="Energy cannot be created or destroyed">Energy cannot be created or destroyed</label><br>
+          <label><input type="radio" name="q10" value="Energy can be created or destroyed">Energy can be created or destroyed</label><br>
+          <label><input type="radio" name="q10" value="Energy is always decreasing">Energy is always decreasing</label><br>
+          <label><input type="radio" name="q10" value="Energy is always increasing">Energy is always increasing</label><br>
+        </div>
+      </div>
+      <div class="quadrant5">
+        <div class="question">
+          <h2>Question 11: What is the SI unit of pressure?</h2>
+          <label><input type="radio" name="q11" value="Pascal">Pascal</label><br>
+          <label><input type="radio" name="q11" value="Newton">Newton</label><br>
+          <label><input type="radio" name="q11" value="Joule">Joule</label><br>
+          <label><input type="radio" name="q11" value="Watt">Watt</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 12: What is the law of conservation of energy?</h2>
+          <label><input type="radio" name="q12" value="Energy cannot be created or destroyed">Energy cannot be created or destroyed</label><br>
+          <label><input type="radio" name="q12" value="Energy can be created or destroyed">Energy can be created or destroyed</label><br>
+          <label><input type="radio" name="q12" value="Energy is always decreasing">Energy is always decreasing</label><br>
+          <label><input type="radio" name="q12" value="Energy is always increasing">Energy is always increasing</label><br>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <footer>
+    <div class="top-footer">
+      <div class="footer-social-icons">
+        <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+        <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
+        <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
+      </div>
+      <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src = "physicsmcs.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+    const sr = ScrollReveal({
+        origin: 'left', // Set origin to left for quadrants 1 and 3
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr.reveal('.quadrant1', { delay: 100 }); // Reveal q1 from left
+    sr.reveal('.quadrant3', { delay: 100 }); // Reveal q3 from left
+
+    const sr2 = ScrollReveal({
+        origin: 'right', // Set origin to right for quadrants 2 and 4
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr2.reveal('.quadrant2', { delay: 100 }); // Reveal q2 from right
+    sr2.reveal('.quadrant4', { delay: 100 }); // Reveal q4 from right
+
+    const sr3 = ScrollReveal({
+        origin: 'bottom', // Set origin to bottom for quadrant 5
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr3.reveal('.quadrant5', { delay: 100 }); // Reveal q5 from bottom
+  </script>
+
+</body>
+</html>

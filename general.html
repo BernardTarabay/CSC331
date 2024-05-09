@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+
+        <!-- --------- UNICONS ---------- -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+        <!-- --------- CSS ---------- -->
+        <link rel="stylesheet" href="cvstyle.css">
+    
+        <!-- --------- FAVICON ---------- -->
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <style>
+    /* Resetting default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-image: linear-gradient(to bottom right, #003147, lightblue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Styling for the quiz form */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.quadrant1, .quadrant2, .quadrant3, .quadrant4, .quadrant5 {
+        background-color: lightblue;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+
+.question {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Quiz</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <form id="quiz-form">
+      <div class="quadrant1">
+        <div class="question">
+          <h2>Question 1: What is the capital of France?</h2>
+          <label><input type="radio" name="q1" value="paris"> Paris</label><br>
+          <label><input type="radio" name="q1" value="london"> London</label><br>
+          <label><input type="radio" name="q1" value="berlin"> Berlin</label><br>
+          <label><input type="radio" name="q1" value="rome"> Rome</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 2: What is the square root of 49?</h2>
+          <input type="text" id="q2" name="q2" placeholder="Enter your answer"><br>
+        </div>
+      </div>
+      <div class="quadrant2">
+        <div class="question">
+          <h2>Question 3: Who was the first president of the United States?</h2>
+          <label><input type="radio" name="q3" value="Gebran Basil">Gebran Basil</label><br>
+          <label><input type="radio" name="q3" value="Adolf Hitler">Adolf Hitler</label><br>
+          <label><input type="radio" name="q3" value="George Washington">George Washington</label><br>
+          <label><input type="radio" name="q3" value="Andrew Tate">Andrew Tate</label><br>
+        </div>
+        <div class="question">
+          <h2>Question 4: Which of the following is a form of energy?</h2>
+          <label><input type="radio" name="q4" value="Atmospheric Pressure">Atmospheric Pressure</label><br>
+          <label><input type="radio" name="q4" value="Heat">Heat</label><br>
+          <label><input type="radio" name="q4" value="Mass">Mass</label><br>
+          <label><input type="radio" name="q4" value="Coldness">Coldness</label><br>
+        </div>
+      </div>
+      <div class="quadrant3">
+        <div class="question">
+          <h2>Question 5: Who created penicillin?</h2>
+          <input type="text" id="q5" name="q5" placeholder="Enter your answer"><br>
+        </div>
+        <!-- New Questions -->
+        <div class="question">
+          <h2>Question 6: What is the chemical symbol for gold?</h2>
+          <label><input type="radio" name="q6" value="Ag">Ag</label><br>
+          <label><input type="radio" name="q6" value="Au">Au</label><br>
+          <label><input type="radio" name="q6" value="Pb">Pb</label><br>
+          <label><input type="radio" name="q6" value="Fe">Fe</label><br>
+        </div>
+      </div>
+      <div class="quadrant4">
+        <div class="question">
+          <h2>Question 7: Who wrote the play "Romeo and Juliet"?</h2>
+          <input type="text" id="q7" name="q7" placeholder="Enter your answer"><br>
+        </div>
+        <div class="question">
+          <h2>Question 8: What is the chemical formula for water?</h2>
+          <input type="text" id="q8" name="q8" placeholder="Enter your answer"><br>
+        </div>
+      </div>
+      <div class="quadrant4">
+        <div class="question">
+          <h2>Question 7: Who wrote the play "Romeo and Juliet"?</h2>
+          <input type="text" id="q7" name="q7" placeholder="Enter your answer"><br>
+        </div>
+        <div class="question">
+          <h2>Question 8: What is the chemical formula for water?</h2>
+          <input type="text" id="q8" name="q8" placeholder="Enter your answer"><br>
+        </div>
+      </div>
+      <div class="quadrant4">
+        <div class="question">
+          <h2>Question 7: Who wrote the play "Romeo and Juliet"?</h2>
+          <input type="text" id="q7" name="q7" placeholder="Enter your answer"><br>
+        </div>
+        <div class="question">
+          <h2>Question 8: What is the chemical formula for water?</h2>
+          <input type="text" id="q8" name="q8" placeholder="Enter your answer"><br>
+        </div>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <footer>
+    <div class="top-footer">
+    </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+      <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
+      <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
+ </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+    </div>
+</footer>
+
+  <script src="general.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+    const sr = ScrollReveal({
+        origin: 'left', // Set origin to left for quadrants 1 and 3
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr.reveal('.quadrant1', { delay: 100 }); // Reveal q1 from left
+    sr.reveal('.quadrant3', { delay: 100 }); // Reveal q3 from left
+
+    const sr2 = ScrollReveal({
+        origin: 'right', // Set origin to right for quadrants 2 and 4
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr2.reveal('.quadrant2', { delay: 100 }); // Reveal q2 from right
+    sr2.reveal('.quadrant4', { delay: 100 }); // Reveal q4 from right
+
+    const sr3 = ScrollReveal({
+        origin: 'bottom', // Set origin to bottom for quadrant 5
+        distance: '80px',
+        duration: 600,
+        reset: true     
+    });
+
+    sr3.reveal('.quadrant5', { delay: 100 }); // Reveal q5 from bottom
+  </script>
+
+
+</body>
+</html>

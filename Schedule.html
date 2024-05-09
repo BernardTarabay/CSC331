@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- --------- UNICONS ---------- -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+      <!-- --------- CSS ---------- -->
+      <link rel="stylesheet" href="cvstyle.css">
+  
+      <!-- --------- FAVICON ---------- -->
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <title>Weekly Schedule</title>
+  <style>
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f8f9fa;
+    }
+
+    .circle-container {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .circle-link, .small-circle-link {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: lightskyblue;
+      text-align: center;
+      line-height: 200px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+      margin: 20px;
+      transition: transform 0.5s, background-color 0.5s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    }
+
+    .circle-link img, .small-circle-link img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .circle-link:hover, .small-circle-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    }
+
+    .circle-link:hover img, .small-circle-link:hover img {
+      opacity: 1;
+    }
+    .active-link::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Position the dot horizontally centered under the link */
+    bottom: -5px; /* Adjust as needed to position the dot under the link */
+    transform: translateX(-50%); /* Center the dot horizontally */
+    transform: translateY(-80px);
+    margin-left: 35px;
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+  </style>
+</head>
+<body>
+  <header>
+
+    <nav id="header">
+      <div class="nav-logo">
+          <p class="nav-name"></p>
+          <span></span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+              <li class="nav_list">
+                  <a href="MainPage.html" class="nav-link">Main</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="index.html" class="nav-link">CV</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Schedule.html" class="nav-link  active-link">Schedule</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Research.html" class="nav-link">Research</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="ArabicContent.html" class="nav-link">Arabic</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Media.html" class="nav-link">Media</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Quiz.html" class="nav-link">Quiz</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="minigames.html" class="nav-link">Games</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Contact Us.html" class="nav-link">Contact</a>
+                  <div class="circle"></div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  
+  </header>
+
+  <section class="circle-container">
+    <a href="bernardschedule.html" class="circle-link">Bernard</a>
+    <a href="akioschedule.html" class="circle-link">Charbel</a>
+    <a href="addschedule.html" class="small-circle-link">
+      
+      <img src="plus.png" alt="Go">
+    </a>
+  </section>
+
+  <footer>
+    <div class="top-footer">
+    </div>
+    </div>
+    <div class="footer-social-icons">
+         <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+         <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
+         <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
+
+
+    </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+      <!-- --------- UNICONS ---------- -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+      <!-- --------- CSS ---------- -->
+      <link rel="stylesheet" href="cvstyle.css">
+  
+      <!-- --------- FAVICON ---------- -->
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .container {
+  max-width: 800px; /* Adjust the container width as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.message-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 300px; /* Limit the height to create a scrollable area */
+  overflow-y: auto;
+  margin-top: 20px; /* Add space between form and message list */
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.remove-button {
+  margin-left: 5px;
+}
+
+  </style>
+  
+</head>
+<body>
+  <header>
+
+    <nav id="header">
+      <div class="nav-logo">
+          <p class="nav-name"></p>
+          <span></span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+              <li class="nav_list">
+                  <a href="MainPage.html" class="nav-link">Main</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="index.html" class="nav-link">CV</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Schedule.html" class="nav-link">Schedule</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Research.html" class="nav-link">Research</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="ArabicContent.html" class="nav-link">Arabic</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Media.html" class="nav-link">Media</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Quiz.html" class="nav-link">Quiz</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="minigames.html" class="nav-link">Games</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="Contact Us.html" class="nav-link active-link">Contact</a>
+                  <div class="circle"></div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  
+    <div class="container">
+      <h1>Contact Us</h1>
+    </div>
+  </header>
+ 
+  <div class="container">
+    <form id="contact-form">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message"></textarea><br>
+
+      <input type="submit" value="Submit">
+    </form>
+    <div id="message-list"></div> <!-- Use message-list instead of message-output -->
+  </div>
+
+  <footer>
+    <div class="top-footer">
+    </div>
+    </div>
+    <div class="footer-social-icons">
+      <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
+      <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
+      <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
+ </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Bernard Tarabay</a> - All rights reserved</p>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
