@@ -5,16 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
 
-      <!-- --------- UNICONS ---------- -->
-      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
       <!-- --------- CSS ---------- -->
       <link rel="stylesheet" href="cvstyle.css">
   
       <!-- --------- FAVICON ---------- -->
-      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">  
   <style>
-    /* Add styles for the quiz setup section */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
     .quiz-setup {
       background-color: #fff;
       padding: 20px;
@@ -28,10 +41,15 @@
 
     .quiz-setup select {
       margin-bottom: 15px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
     }
 
     #start-game {
-      background-color: #4CAF50;
+      background-color: #28a745;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -41,64 +59,60 @@
     }
 
     #start-game:hover {
-      background-color: #45a049;
+      background-color: #218838;
+    }
+    .header{
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-
-    <nav id="header">
-      <div class="nav-logo">
-          <p class="nav-name"></p>
-          <span></span>
-      </div>
-      <div class="nav-menu" id="myNavMenu">
-          <ul class="nav_menu_list">
-              <li class="nav_list">
-                  <a href="MainPage.html" class="nav-link">Main</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="index.html" class="nav-link">CV</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="Schedule.html" class="nav-link">Schedule</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="Research.html" class="nav-link">Research</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="ArabicContent.html" class="nav-link">Arabic</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="Media.html" class="nav-link">Media</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="Quiz.html" class="nav-link  active-link">Quiz</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="minigames.html" class="nav-link">Games</a>
-                  <div class="circle"></div>
-              </li>
-              <li class="nav_list">
-                  <a href="Contact Us.html" class="nav-link">Contact</a>
-                  <div class="circle"></div>
-              </li>
-          </ul>
-      </div>
-  </nav>
-  
-    <div class="container">
-      <h1>Quiz</h1>
+  <nav id="header">
+    <div class="nav-logo">
+        <p class="nav-name"></p>
+        <span></span>
     </div>
-  </header>
+    <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+            <li class="nav_list">
+                <a href="MainPage.html" class="nav-link active-link">Main</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="index.html" class="nav-link">CV</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="Schedule.html" class="nav-link">Schedule</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="Research.html" class="nav-link">Research</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="ArabicContent.html" class="nav-link">Arabic</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="Media.html" class="nav-link">Media</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="Quiz.html" class="nav-link">Quiz</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="minigames.html" class="nav-link">Games</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="Contact Us.html" class="nav-link">Contact</a>
+                <div class="circle"></div>
+            </li>
+        </ul>
+    </div>
+    </nav>
 
   <div class="container">
     <div class="quiz-setup">
@@ -123,20 +137,15 @@
   </div>
 
   <footer>
-    <div class="top-footer">
-    </div>
-    </div>
     <div class="footer-social-icons">
       <div class="icon"><a href="https://www.instagram.com/_bernardtarabay_/"><i class="uil uil-instagram"></i></a></div>
       <div class="icon"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FBernardTarabay_"><i class="uil uil-twitter" aria-hidden="true"></i></a></div>
       <div class="icon"><a href="https://www.facebook.com/bernard.w.tarabay/"><i class="uil uil-facebook" aria-hidden="true"></i></a></div>
-
-
- </div>
-    <div class="bottom-footer">
-        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">bernard Tarabay</a> - All rights reserved</p>
     </div>
-</footer>
+    <div class="bottom-footer">
+      <p>Copyright &copy; <a href="#home" style="text-decoration: none;">bernard Tarabay</a> - All rights reserved</p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('start-game').addEventListener('click', function() {
