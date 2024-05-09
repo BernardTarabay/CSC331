@@ -53,12 +53,18 @@ form {
         grid-gap: 60px; /* Increased gap between quadrants */
     }
 
-.quadrant1, .quadrant2, .quadrant3, .quadrant4, .quadrant5 {
+.quadrant1, .quadrant2, .quadrant3, .quadrant4, .quadrant5, .quadrant6 {
         background-color: lightblue;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    /* -------quadrants styling--------*/
+.quadrant1:hover, .quadrant2:hover, .quadrant3:hover, .quadrant4:hover, .quadrant5:hover, .quadrant6:hover {
+    transform: scale(1.2); /* Slightly scale up on hover */
+    background-color: lightseagreen;
+}
 
 
 .question {
@@ -166,7 +172,7 @@ input[type="submit"]:hover {
           <label><input type="radio" name="q8" value="Mutation">Mutation</label><br>
         </div>
       </div>
-      <div class="quadrant4">
+      <div class="quadrant5">
         <div class="question">
           <h2>Question 7: Which of the following is NOT a function of the liver?</h2>
           <label><input type="radio" name="q9" value="Detoxification of harmful substances">Detoxification of harmful substances</label><br>
@@ -182,7 +188,7 @@ input[type="submit"]:hover {
           <label><input type="radio" name="q10" value="Mutation">Mutation</label><br>
         </div>
       </div>
-      <div class="quadrant4">
+      <div class="quadrant6">
         <div class="question">
           <h2>Question 7: Which of the following is NOT a function of the liver?</h2>
           <label><input type="radio" name="q11" value="Detoxification of harmful substances">Detoxification of harmful substances</label><br>
